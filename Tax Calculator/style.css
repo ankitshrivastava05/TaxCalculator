@@ -1,0 +1,44 @@
+.container{
+    margin-top: 55px;
+    border: 1px solid black;
+    height: 480px;
+    width: 450px;
+}
+#taxForm{
+    padding: 30px;
+    padding-top: 40px;
+}
+.btn1{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.modal{
+    margin-top: 90px;
+    
+}
+.modal-content{
+    height: 300px;
+    width: 500px;
+}
+.closed{
+    background-color: blueviolet;
+    color: white;
+    margin-right: 220px;
+}
+.modal-body{
+    padding: 30px;
+    margin: 30px;
+    margin-bottom: 1px;
+}
+#after{
+    text-align: center;
+}
+
+.error-icon {
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }

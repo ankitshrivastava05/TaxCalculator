@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Calculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <form id="taxForm">
+        <div class="form-group position-relative">
+            <label for="annualincome"><b>Enter gross annual income (in Lakhs)</b></label>
+            <input type="text" class="form-control" id="annualincome" placeholder="Enter gross annual income">
+            <div class="error-icon" id="annualincomeError" title="Please enter numbers only!">!</div>
+          </div>
+      <div class="form-group position-relative">
+        <label for="extraincome"><b>Enter extra income (in Lakhs)</b></label>
+        <input type="text" class="form-control" id="extraincome" placeholder="Enter extra income from other sources">
+        <div class="error-icon" id="extraincomeError"  title="Please enter numbers only!">!</div>
+      </div>
+      <div class="form-group position-relative">
+        <label for="age"><b>Enter age group</b></label>
+        <select class="form-control" id="age">
+          <option value="<40">&lt;40</option>
+          <option value=">=40&<60">≥ 40 &lt; 60</option>
+          <option value=">=60">≥ 60</option>
+        </select>
+      </div>
+      <div class="form-group position-relative">
+        <label for="deductions"><b>Enter total applicable deductions (in Lakhs) </b> </label>
+        <input type="text" class="form-control" id="deductions" placeholder="Add total applicable deductions">
+        <div class="error-icon"  title="Please enter numbers only!">!</div>
+      </div>
+      <button type="submit" class="btn1 btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5 id="resultText"></h5>
+          <p id="after"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="closed" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
